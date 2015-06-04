@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>博文分类</title>
+</head>
+<link href="__PUBLIC__/Admin/css/css.css" rel="stylesheet"
+	type="text/css">
+<import type='css' file='Admin.Images.css1.css' />
+<style>
+td,th {
+	text-align: center
+}
+</style>
+</head>
+<body>
+	<form method='post' action='__URL__/deleteAll'>
+		<table class="table" cellspacing="1" cellpadding="2" width="99%"
+			align="center" border="0">
+			<tbody>
+				<tr>
+					<th class="bg_tr" align="left" height="25">序号</th>
+					<th class="bg_tr" align="left" height="25">分类</th>
+					
+					<th class="bg_tr" align="left" height="25">修改</th>
+					<th class="bg_tr" align="left" height="25">
+						<input type='submit' name='deleteSubmit' value='删除' />
+					</th>
+				</tr>
+
+				<volist name='data' id='vo'>
+				<tr>
+					<td class="td_bg" width="5%" height="23" align="center">{$i}</td>
+					<td class="td_bg">{$vo.value}</td>
+					<td class="td_bg">
+						<a href="__URL__/edit/id/{$vo.id}">修改</a>
+					</td>
+					<td class="td_bg">
+						<input type='checkbox' value="{$vo.id}" name='id[]' />
+					</td>
+				</tr>
+				</volist>
+				<tr>
+					<td colspan="6">{$show}</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>
