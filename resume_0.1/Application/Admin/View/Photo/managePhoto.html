@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Manage Photo</title>
+</head>
+<link href="__PUBLIC__/Admin/css/css.css" rel="stylesheet"
+	type="text/css">
+<import type='css' file='Admin.Images.css1.css' />
+<style>
+td,th {
+	text-align: center
+}
+</style>
+</head>
+<body>
+<form method='post' action='__URL__/deleteAll'>
+		<table class="table" cellspacing="1" cellpadding="2" width="99%"
+			align="center" border="0">
+			<tbody>
+				<tr>
+					<th class="bg_tr" align="left" height="25">序号</th>
+					<th class="bg_tr" align="left" height="25">pname</th>
+					<th class="bg_tr" align="left" height="25">标题[ptitle]</th>
+					<th class="bg_tr" align="left" height="25">简单说明[pinfo]</th>
+					<th class="bg_tr" align="left" height="25">所属类[classes]</th>
+					<th class="bg_tr" align="left" height="25">
+						<input type='submit' name='deleteSubmit' value='删除' />
+					</th>
+				</tr>
+
+				<volist name='data' id='vo'>
+				<tr>
+					<td class="td_bg" width="5%" height="23" align="center">{$vo.id}</td>
+					<td class="td_bg">{$vo.pname}</td>
+					<td class="td_bg">{$vo.ptitle}</td>
+					<td class="td_bg">{$vo.pinfo}</td>
+					<td class="td_bg">{$vo.classes}</td>
+
+					<td class="td_bg">
+						<input type='checkbox' value="{$vo.id}" name='id[]' />
+					</td>
+				</tr>
+				</volist>
+				<tr>
+					<td colspan="6">{$show}</td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</html>
