@@ -1,0 +1,53 @@
+<div id="portfolio" class="content_2">
+                                                
+                                                <!-- .title -->
+                                                <h1 class="h-bloc">Work And Life Photo</h1>
+
+                                                <!-- .container-portfolio -->
+                                                <div class="container-portfolio">
+
+                                                    <!-- #filters -->
+                                                    <ul id="filters" class="clearfix">
+                                                        <li><span class="filter active" data-filter="catWeb catGraphic catMotion logo">所有</span></li>
+                                                        <li><span class="filter" data-filter="catWeb">生活</span></li>
+                                                        <li><span class="filter" data-filter="catGraphic">工作</span></li>
+                                                        <li><span class="filter" data-filter="catMotion">图片</span></li>
+                                                        <!--<li><span class="filter" data-filter="logo">Logo</span></li>-->
+                                                    </ul>
+                                                    <!-- /#filters -->
+                                    
+                                                    <!-- #portfoliolist -->
+                                                    <div id="portfoliolist">
+
+                                                    <volist name='photodata' id='vo'>
+                                                        <!-- .portfolio -->
+                                                        <div class="portfolio {$vo.classes}" data-cat="{$vo.classes}">
+                                                            <!-- .portfolio-wrapper -->
+                                                            <div class="portfolio-wrapper">         
+                                                                <a href="{$vo.pname}" rel="portfolio">
+                                                                    <img src="{$vo.pname}" alt="Sonor's Design" />
+                                                                    <div class="label">
+                                                                        <div class="label-text">
+                                                                            <a class="text-title">{$vo.ptitle}</a>
+                                                                            <span class="text-category">{$vo.pinfo}</span>
+                                                                        </div>
+                                                                        <div class="label-bg"></div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <!-- /.portfolio-wrapper -->
+                                                        </div>	
+                                                    </volist>
+                                                        <!-- /.portfolio -->
+
+                                                        
+
+                                    
+                                                        <div class="clear"></div>
+
+                                                    </div>
+                                                    <!-- #portfoliolist -->
+                                                </div>
+                                                <!-- /.container-portfolio -->
+                                                                                       </div>
+                                            <!-- End .portfolio -->
